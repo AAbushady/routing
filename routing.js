@@ -35,4 +35,44 @@ These numbers should be stored in an array. Iterate over the array and
 determine if the entered routing number is in the array. If the number is in the
 array, display "valid". If the routing number is not an array, indicate that it is
 invalid.
+
+Use 32507060 as the input routing number.
 */
+
+// Pseudocode
+/*
+--Variables and Constants--
+Declare a Constant Array validRouting.
+Declare a Numeric Variable userInput.
+Declare a Boolean Variable check as false.
+
+--Calculation--
+Loop through the Array:
+    If userInput matches validRouting:
+        Change check to true.
+        
+--Display Values--
+If check is true:
+    Display "Valid Routing Number!"
+else:
+    Display "Invalid Routing Number..."
+*/
+
+const validRouting = [122100024, 322271627, 102001017, 021100361, 267084131, 061092387, 123271978,
+                      071000013, 074000010, 083000237, 065400137, 072000326, 322271627, 021202337,
+                      021000021, 022300173, 044000037, 103000648, 325070760, 111000614, 124001545,
+                      325070760, 051900366, 075000019];
+var userInput = 32507060;
+var check = false;
+
+for (var i = 0, cnt = validRouting.length; i < cnt; i++) {
+    if (userInput == validRouting[i]) {
+        check = true;
+    }
+}
+
+if (check) {
+    console.log("Valid Routing Number!");
+} else {
+    console.log("Invalid Routing Number...");
+}
